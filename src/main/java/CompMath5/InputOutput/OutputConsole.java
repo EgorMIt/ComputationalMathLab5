@@ -1,4 +1,6 @@
-package CompMath5;
+package CompMath5.InputOutput;
+
+import CompMath5.DrawChart;
 
 public class OutputConsole {
     DrawChart drawChart = new DrawChart();

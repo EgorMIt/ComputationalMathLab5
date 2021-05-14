@@ -1,4 +1,4 @@
-package CompMath5;
+package CompMath5.Computations;
 
 public class Functions {
     public double f(double x, int functionNumber) {

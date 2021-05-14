@@ -1,23 +1,33 @@
-package CompMath5;
+package CompMath5.Computations;
 
-public class LagrangeMethod {
-    private double l(int index, double[] points_x, double x) {
-        double l = 1;
-        for (int i = 0; i < points_x.length; i++) {
-            if (i != index) {
-                l *= (x - points_x[i]) / (points_x[index] - points_x[i]);
-            }
+public class NewtonMethod {
+    private double getDivider(int n, int index, double[][] points) {
+        double divider = 1;
+        for (int i = 0; i < n; i++) {
+            if (i != index)
+                divider *= points[0][index] - points[0][i];
         }
-        return l;
+        return divider;
+    }
+
+    private double getF(double[][] points, int n) {
+        double f = 0;
+        for (int i = 0; i < n; i++) {
+            f += points[1][i] / getDivider(n, i, points);
+        }
+        return f;
     }
 
     public double getCountValue(double[][] points, double x) {
-        double y = 0;
-        for (int i = 0; i < points[0].length; i++) {
-            y += points[1][i] * l(i, points[0], x);
+        double y = points[1][0];
+        double cf = 1;
+        for (int i = 2; i <= points[0].length; i++) {
+            cf *= x - points[0][i - 2];
+            y += cf * getF(points, i);
         }
         return y;
     }
+
 
     public double calculationError(double[][] points, int functionNumber, double x) {
         double tmp = 1;

@@ -1,5 +1,11 @@
 package CompMath5;
 
+import CompMath5.Computations.Functions;
+import CompMath5.Computations.LagrangeMethod;
+import CompMath5.Computations.NewtonMethod;
+import CompMath5.InputOutput.InputConsole;
+import CompMath5.InputOutput.OutputConsole;
+
 public class Main {
     public static void main(String[] args) {
         InputConsole inputConsole = new InputConsole();

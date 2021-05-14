@@ -2,6 +2,9 @@ package CompMath5;
 
 import javax.swing.*;
 
+import CompMath5.Computations.Functions;
+import CompMath5.Computations.LagrangeMethod;
+import CompMath5.Computations.NewtonMethod;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
