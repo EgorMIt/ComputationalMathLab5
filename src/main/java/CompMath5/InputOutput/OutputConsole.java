@@ -10,8 +10,8 @@ public class OutputConsole {
 
         switch (functionNumber) {
             case (1) -> System.out.print("sin(x) = ");
-            case (2) -> System.out.print("x^2+3*x-2 = ");
-            default -> System.out.print("3^x-x^2+2*x = ");
+            case (2) -> System.out.print("x^2 + 3*x - 2 = ");
+            default -> System.out.print("3^x - x^2 + 2*x = ");
         }
 
         System.out.println(x);
@@ -32,7 +32,6 @@ public class OutputConsole {
     public void outSection(double[][] points) {
         System.out.println("Отрезок [ " + points[0][0] + " ; " + points[0][points[0].length - 1] + " ]");
     }
-
 
     public void drawChart(double[][] points, int functionNumber) {
         drawChart.drawLagrange(points, functionNumber);

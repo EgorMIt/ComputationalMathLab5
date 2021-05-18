@@ -26,8 +26,8 @@ public class InputConsole {
         System.out.println("""
                 Выберете функцию:
                 1. sin(x)
-                2. x^2+3*x-2
-                3. 3^x-x^2+2*x
+                2. x^2 + 3*x - 2
+                3. 3^x - x^2 + 2*x
                 """);
         try {
             int functionNumber = Integer.parseInt(in.next().trim());
